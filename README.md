@@ -1,5 +1,7 @@
 # @powforge/mcp-identity
 
+[![zekebuilds-lab/mcp-identity MCP server](https://glama.ai/mcp/servers/zekebuilds-lab/mcp-identity/badges/score.svg)](https://glama.ai/mcp/servers/zekebuilds-lab/mcp-identity)
+
 > MCP server that scores any Nostr pubkey's depth-of-identity before your handler runs. Chaintip-anchored Schnorr cert, L402 priced, drop-in for AI agents that need Sybil resistance on top of paid APIs.
 
 **npm:** `npm i @powforge/mcp-identity`
