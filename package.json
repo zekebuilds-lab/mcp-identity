@@ -1,0 +1,53 @@
+{
+  "name": "@powforge/mcp-identity",
+  "version": "0.7.2",
+  "mcpName": "io.github.zekebuilds-lab/mcp-identity",
+  "description": "MCP server exposing PowForge Depth-of-Identity oracle to Claude Code, Cursor, and any MCP-compatible agent. Three tools: doi_score_lookup (priced via L402), doi_sign_vouch (unsigned-event builder), doi_score_verify (offline schnorr verification). The Lightning-Network L402 paywall returns priced JSON envelopes whose price can be made a function of the caller's own DoI score.",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "modelcontextprotocol",
+    "identity",
+    "depth-of-identity",
+    "nostr",
+    "lightning",
+    "l402",
+    "agent-auth",
+    "agent",
+    "schnorr",
+    "claude",
+    "ai",
+    "powforge"
+  ],
+  "main": "src/index.js",
+  "bin": {
+    "mcp-identity": "src/server.js"
+  },
+  "scripts": {
+    "test": "node --test tests/server.test.js",
+    "start": "node src/server.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zekebuilds-lab/mcp-identity"
+  },
+  "homepage": "https://powforge.dev/explorer",
+  "bugs": {
+    "url": "https://powforge.dev"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@noble/hashes": "^2.2.0",
+    "@noble/secp256k1": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

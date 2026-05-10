@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zekebuilds-lab/mcp-identity",
+  "description": "DoI score lookup, vouch event builder, and offline schnorr verify for AI agents.",
+  "repository": {
+    "url": "https://github.com/zekebuilds-lab/mcp-identity",
+    "source": "github"
+  },
+  "version": "0.7.2",
+  "websiteUrl": "https://powforge.dev/explorer",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@powforge/mcp-identity",
+      "version": "0.7.2",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "description": "PowForge Depth-of-Identity oracle base URL. Defaults to public production endpoint when running via npx; override for self-hosted or local dev.",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false,
+          "name": "ORACLE_URL",
+          "default": "https://identity.powforge.dev"
+        },
+        {
+          "description": "Schnorr pubkey of the DoI oracle, used for offline envelope verification. Defaults to the production PowForge oracle pubkey; override only if pointing at a self-hosted oracle.",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false,
+          "name": "ORACLE_PUBKEY",
+          "default": "b4b12dfbc3dfdfa803bb72e344e761dc78db4ec2058c8db3f1c3ac63f9e42b44"
+        }
+      ]
+    }
+  ]
+}
